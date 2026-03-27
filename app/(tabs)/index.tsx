@@ -22,9 +22,7 @@ export default function Index() {
   );
   const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const [pickedEmoji, setPickedEmoji] = useState<
-    ImageSourcePropType | undefined
-  >(undefined);
+  const [pickedEmojis, setPickedEmojis] = useState<ImageSourcePropType[]>([]);
   const [permissionResponse, requestPermission] = MediaLibrary.usePermissions();
 
   const imageRef = useRef<View>(null);
@@ -52,6 +50,7 @@ export default function Index() {
 
   const onReset = () => {
     setShowAppOptions(false);
+    setPickedEmojis([]);
   };
 
   const onAddSticker = () => {
@@ -103,9 +102,9 @@ export default function Index() {
             imgSource={PlaceholderImage}
             selectedImage={selectedImage}
           />
-          {pickedEmoji && (
-            <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />
-          )}
+          {pickedEmojis.map((emoji, index) => (
+            <EmojiSticker key={index} imageSize={40} stickerSource={emoji} />
+          ))}
         </View>
       </View>
       {showAppOptions ? (
@@ -134,7 +133,10 @@ export default function Index() {
         </View>
       )}
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
-        <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
+        <EmojiList
+          onSelect={(item) => setPickedEmojis([...pickedEmojis, item])}
+          onCloseModal={onModalClose}
+        />
       </EmojiPicker>
     </GestureHandlerRootView>
   );
