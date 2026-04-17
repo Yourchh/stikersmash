@@ -1,51 +1,57 @@
-# Welcome to your Expo app 👋
+# StikerSmash 💥
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Una aplicación interactiva desarrollada en **React Native** y **Expo** que permite a los usuarios personalizar sus fotografías añadiendo divertidos stickers (emojis), manipularlos mediante gestos táctiles (arrastrar, escalar) y guardar la composición final directamente en la galería del dispositivo.
 
-## Get started
+---
 
-1. Install dependencies
+## 📸 Galería de la Aplicación
+
+A continuación se muestra el flujo inicial de la aplicación:
+
+<div align="center">
+  <img src="./assets/screenshots/screen1.png" width="250" alt="Ícono de la aplicación en el menú de iOS/Android">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/screenshots/screen2.png" width="250" alt="Pantalla de carga (Splash Screen) de 3 segundos">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/screenshots/screen3.png" width="250" alt="Interfaz principal de StikerSmash">
+</div>
+
+_Nota: La pantalla de carga (Splash Screen) está configurada para mostrarse durante exactamente 3 segundos antes de revelar la interfaz principal, asegurando una transición fluida._
+
+---
+
+## ✨ Características Principales
+
+- **Selección de Imágenes:** Acceso a la galería del dispositivo para elegir la fotografía base.
+- **Catálogo de Stickers:** Selector deslizable de emojis personalizados.
+- **Motor de Gestos:** Soporte nativo para arrastrar los stickers por la pantalla y redimensionarlos (doble toque/pellizco) con animaciones fluidas a 60fps.
+- **Exportación:** Renderizado de la vista final (fotografía + stickers) y guardado automático en el carrete del dispositivo.
+- **Diseño Responsivo:** Interfaz limpia y profesional que se adapta automáticamente a los modos claro y oscuro del sistema.
+
+---
+
+## 🛠️ Tecnologías y Herramientas
+
+Este proyecto está construido con un enfoque en el rendimiento y una experiencia de usuario (UX) pulida:
+
+- **[React Native](https://reactnative.dev/):** Framework principal.
+- **[Expo](https://expo.dev/):** Entorno de desarrollo, construcción nativa y enrutamiento (`expo-router`).
+- **[Reanimated 3](https://docs.swmansion.com/react-native-reanimated/):** Para animaciones fluidas en el hilo de la interfaz de usuario.
+- **[Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/):** Manejo preciso de interacciones físicas (arrastrar, escalar).
+- **[Expo Image Picker & Media Library](https://docs.expo.dev/versions/latest/):** Para la gestión de permisos, importación y exportación de medios.
+
+---
+
+## 🚀 Instalación y Uso Local
+
+Si deseas correr este proyecto en tu entorno local, sigue estos pasos:
+
+1. **Clona el repositorio:**
 
    ```bash
-   npm install
+   git clone [https://github.com/tu-usuario/stikersmash.git](https://github.com/tu-usuario/stikersmash.git)
+   cd stikersmash
    ```
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# stikersmash
+ps://github.com/tu-usuario/stikersmash.git](<https://github.com/tu-usuario/stikersmash.git>)
+cd stikersmash
