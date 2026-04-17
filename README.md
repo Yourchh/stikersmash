@@ -41,17 +41,3 @@ Este proyecto está construido con un enfoque en el rendimiento y una experienci
 - **[Expo Image Picker & Media Library](https://docs.expo.dev/versions/latest/):** Para la gestión de permisos, importación y exportación de medios.
 
 ---
-
-## 🚀 Instalación y Uso Local
-
-Si deseas correr este proyecto en tu entorno local, sigue estos pasos:
-
-1. **Clona el repositorio:**
-
-   ```bash
-   git clone [https://github.com/tu-usuario/stikersmash.git](https://github.com/tu-usuario/stikersmash.git)
-   cd stikersmash
-   ```
-
-ps://github.com/tu-usuario/stikersmash.git](<https://github.com/tu-usuario/stikersmash.git>)
-cd stikersmash
