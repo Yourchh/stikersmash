@@ -64,8 +64,3 @@ Este proyecto está construido con un enfoque en el rendimiento y una experienci
 
 ---
 
-## 🚀 Instalación y Uso
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [https://github.com/tu-usuario/StickerSmash.git](https://github.com/tu-usuario/StickerSmash.git)
