@@ -36,12 +36,22 @@ _Nota: La pantalla de carga (Splash Screen) está configurada para mostrarse dur
 La aplicación integra un sistema de notificaciones para mejorar la experiencia del usuario, confirmando acciones críticas como el guardado exitoso de archivos o enviando recordatorios de personalización.
 
 ### 📸 Vista Previa
-<img src="./assets/screenshots/screen4.png" width="300" alt="Notificación en la pantalla de bloqueo de iOS">
 
-
-https://github.com/user-attachments/assets/9ac630d5-5efb-44bb-ba9f-ae7cd2bf00f9
-
-
+<table style="border-collapse: collapse; border: none; margin-left: auto; margin-right: auto;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; vertical-align: middle; padding: 20px;">
+      <img src="./assets/screenshots/screen4.png" alt="Captura de Notificación">
+      <br>
+      <em>Tamaño original</em>
+    </td>
+    <td align="center" style="border: none; vertical-align: middle; padding: 20px;">
+      <video src="https://github.com/user-attachments/assets/22361b59-4861-493c-a1d2-57d40ee5c347" controls>
+      </video>
+      <br>
+      <em>Video original</em>
+    </td>
+  </tr>
+</table>
 
 
 ---
