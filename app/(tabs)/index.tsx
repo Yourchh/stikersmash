@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import { ImageSourcePropType, Platform, StyleSheet, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { captureRef } from "react-native-view-shot";
+// Importación de notificaciones
+import * as Notifications from "expo-notifications";
 
 import Button from "@/components/Button";
 import CircleButton from "@/components/CircleButton";
@@ -32,6 +34,18 @@ export default function Index() {
       requestPermission();
     }
   }, []);
+
+  // Función para enviar la notificación local al guardar
+  const triggerSaveNotification = async () => {
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: "¡Imagen Guardada! 🎨",
+        body: "Tu creación de StikerSmash se ha guardado en la galería.",
+        data: { type: "save_success" },
+      },
+      trigger: null, // Envío inmediato
+    });
+  };
 
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
@@ -71,6 +85,8 @@ export default function Index() {
 
         await MediaLibrary.saveToLibraryAsync(localUri);
         if (localUri) {
+          // Disparamos la notificación local al tener éxito
+          await triggerSaveNotification();
           alert("Saved!");
         }
       } catch (e) {
@@ -88,6 +104,9 @@ export default function Index() {
         link.download = "sticker-smash.jpeg";
         link.href = dataUrl;
         link.click();
+
+        // También funciona en web para mostrar un aviso visual si el navegador lo permite
+        await triggerSaveNotification();
       } catch (e) {
         console.log(e);
       }
